@@ -14,5 +14,7 @@ clean:
 	rm -f $(EXE)
 	rm -f $(DSK)
 
+$(DSK):	$(EXE)
+
 run:	$(DSK)
 	cap32 ./$(DSK) --autocmd=run\"fill.bin\"
